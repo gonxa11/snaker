@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+* {
+    font-family: 'Silkscreen', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #13171d;
+    gap: 20px;
+}
+
+.container {
+    position: relative;
+    color: #fff;
+}
+
+#canvas {
+    border: 2px solid rgb(207, 235, 244);
+    box-shadow: 0 0 10px rgb(91, 199, 223);
+}
+
+.container .score {
+    position: absolute;
+    top: 0;
+    left: 12px;
+    font-size: 40px;
+}
+
+.container .menu {
+    border: 2px solid #fff;
+    background-color: rgb(0, 0, 0, 0.5);
+    border-radius: 8px;
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container .menu h2 {
+    font-style: 70px;
+}
+
+.container .characters {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#snake-1, #snake-2 {
+    border: 2px solid #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#snake-1:hover, #snake-2:hover {
+    background-color: rgb(225, 225, 225, 0.1);
+}
+
+.container .menu p {
+    font-size: 15px;
+    animation: parpadeo 1s infinite;
+}
+
+@keyframes parpadeo {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.puntuacion {
+    border: 2px solid rgb(207, 235, 244);
+    box-shadow: 0 0 10px rgb(91, 199, 223);
+    height: 380px;
+    border-radius: 8px;
+    padding: 8px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: auto;
+}
+
+.table {
+    background-color: #fff5;
+    border-radius: .8rem;
+    text-align: center;
+    padding: 1rem;
+    border-collapse: collapse;
+    border-spacing: 0;
+    overflow: hidden;
+    margin: auto;
+}
+
+th {
+    color: #fff;
+    padding: 10px;
+    border: none;
+    background-color: #00000072;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.637)
+}
+
+td {
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    font-weight: 600;
+}
+
+.table tbody tr:hover td {
+    color: #000;
+}
+
+.player {
+    border: none;
+    border-radius: 8px;
+    padding: 5px;
+    text-align: center;
+}
